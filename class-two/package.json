@@ -1,0 +1,14 @@
+{
+  "name": "class-two",
+  "version": "1.0.0",
+  "description": "NamasteJs class two",
+  "main": "App.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Suchita",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.8.3"
+  }
+}
