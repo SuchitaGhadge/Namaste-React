@@ -1,14 +1,19 @@
 {
   "name": "class-two",
   "version": "1.0.0",
-  "description": "NamasteJs class two",
+  "description": "Class two of Namaste React",
   "main": "App.js",
   "scripts": {
     "test": "jest"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SuchitaGhadge/Namaste-React.git"
+  },
   "author": "Suchita",
   "license": "ISC",
-  "devDependencies": {
-    "parcel": "^2.8.3"
-  }
+  "bugs": {
+    "url": "https://github.com/SuchitaGhadge/Namaste-React/issues"
+  },
+  "homepage": "https://github.com/SuchitaGhadge/Namaste-React#readme"
 }
