@@ -2,7 +2,7 @@
   "name": "class-two",
   "version": "1.0.0",
   "description": "Class two of Namaste React",
-  "main": "App.js",
+
   "scripts": {
     "test": "jest"
   },
