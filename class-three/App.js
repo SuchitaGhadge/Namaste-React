@@ -1,16 +1,17 @@
 import React from "react";
-import ReactDOM from "react-dom/client"
+import ReactDOM from "react-dom/client";
 
-const heading = React.createElement(
-    "h1",
-    {
-        id : "title"
-    },
-    "Heading 1"
-);
+// React.CreateElement => React Element => JS Object => HTML Element(Render)
+const heading = React.createElement("h1", {class: "heading"}, "Namaste React 🚀")
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-console.log("root", root);
-root.render(heading)
+console.log("heading", heading)
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
+// JSX - HTML like or XML like syntax
+// JSX => Babel transpiles it to React.CreateElement => React Element => JS Object => HTML Element(Render)
+const jsxheading = <h1 className="heading">Namaste React 🚀 using JSX</h1> 
+console.log("jsxheading", jsxheading)
+root.render(jsxheading)
 
 // npx parcel index.html --https   == for build local on https instead of http
