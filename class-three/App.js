@@ -23,8 +23,20 @@ const HeadingComponent = () => {
     )
 }
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
+const elem = <span>React Element</span>
+const titletwo = (
+    <div>
+        {elem}
+        <p>Title</p>
+        <HeadingComponent />
+        <HeadingComponent></HeadingComponent>
+        {HeadingComponent()}
+    </div>
+)
 
-root.render(<HeadingComponent/>)
+const root = ReactDOM.createRoot(document.getElementById("root"));
+const rootTwo = ReactDOM.createRoot(document.getElementById("root"));
+
+root.render(titletwo)
 
 // npx parcel index.html --https   == for build local on https instead of http
