@@ -1,29 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-/**
- * Planning for food ordering app
- *
- * Component list
- * Header
- *  - Logo
- *  - Nav items
- *  - Cart
- * Body
- *  - Search
- *  Restaurant Container
- *      - Restaurant Card
- *          - Img
- *          - Name of Restaurant
- *          - Cuisine, Star rating, estimate time for delivery
- *          - Cost for 2
- * Footer
- *  - Copyright
- *  - Links
- *  - Address
- *  - Contact
- *
- */
+
 const cards = [
   {
     "card": {
@@ -1084,6 +1062,5 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(<App />);
 
-// Lecture stooped at 1:50:25mins
 
 // npx parcel index.html --https   == for build local on https instead of http
