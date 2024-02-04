@@ -17,5 +17,5 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(<App />);
 
-
+// chapter 05 - video paused on 56:14
 // npx parcel index.html --https   == for build local on https instead of http

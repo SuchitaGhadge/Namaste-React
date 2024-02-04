@@ -1,7 +1,7 @@
 {
   "name": "class-two",
   "version": "1.0.0",
-  "description": "Class two of Namaste React",
+  "description": "Class four of Namaste React",
   "main": "dist/index.js",
   "scripts": {
     "start": "parcel index.html",
