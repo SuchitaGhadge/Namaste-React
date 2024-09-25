@@ -2,7 +2,6 @@ import {CDN_URL} from "../utils/constants";
 
 const RestaurantCard = (props) => {
     const { resData } = props
-    console.log("res data", resData);
     const {info : {cloudinaryImageId, name, costForTwo, avgRating, cuisines}} = resData?.card?.card;
     return (
       <section className="restaurant-card">
