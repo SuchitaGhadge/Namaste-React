@@ -2,11 +2,17 @@ import { useEffect, useState } from "react";
 import cards from "../utils/mockData";
 import RestaurantCard from "./RestaurantCard";
 import Shimmer from "./Shimmer"
+import { Link } from "react-router-dom";
 const Body = () => {
+  // useState is used to create local state variable inside a function component.
   // Whenever state variable updates, React triggers reconciliation cycle (re-renders  the component)
     const [listOfRes, setListOfRes] = useState([]);
     const [filteredListOfRes, setFilteredListOfRes] = useState([])
     const [searchText, setSearchText] = useState("");
+
+    // If no dependancy array => useEffect will re-render on every component render
+    // If dependancy array is empty = [] => useEffect is called on initial render (only once)
+    // If dependancy array contains any state => useEffect will called on initial render + on every dependant state update
     useEffect(() => {
       fetchData()
     },[])
@@ -37,8 +43,11 @@ const Body = () => {
                 </button>
         </div>
         <section className="restaurant-container">
-         {filteredListOfRes.length && filteredListOfRes.map((restaurant) =>  <RestaurantCard key={restaurant?.card?.card?.info?.id} resData={restaurant}/>)}
-       
+         {filteredListOfRes.length && filteredListOfRes.map((restaurant) =>  
+          <Link key={restaurant?.card?.card?.info?.id} to={`/restaurants/${restaurant?.card?.card?.info?.id}`} >
+            <RestaurantCard key={restaurant?.card?.card?.info?.id} resData={restaurant}/>
+          </Link>
+          )}
         </section>
       </div>
     );

@@ -97,7 +97,7 @@ const cards = [
             "parentId": "125494",
             "avgRatingString": "4.1",
             "totalRatingsString": "1K+",
-            "promoted": true,
+            "promoted": false,
             "adTrackingId": "cid=10087706~p=2~eid=0000018c-9265-285f-36e4-7308003a0214~srvts=1703263152223~83647",
             "sla": {
               "deliveryTime": 47,
@@ -175,7 +175,7 @@ const cards = [
             "parentId": "154611",
             "avgRatingString": "4.4",
             "totalRatingsString": "1K+",
-            "promoted": true,
+            "promoted": false,
             "adTrackingId": "cid=10056954~p=3~eid=0000018c-9265-285f-36e4-7309003a0353~srvts=1703263152223~83647",
             "sla": {
               "deliveryTime": 39,
@@ -325,7 +325,7 @@ const cards = [
             "parentId": "7952",
             "avgRatingString": "4.2",
             "totalRatingsString": "1K+",
-            "promoted": true,
+            "promoted": false,
             "adTrackingId": "cid=10032320~p=5~eid=0000018c-9265-285f-36e4-730b003a0521~srvts=1703263152223~83647",
             "sla": {
               "deliveryTime": 52,
