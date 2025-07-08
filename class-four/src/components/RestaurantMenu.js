@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import cards from "../utils/mockData";
 import Shimmer from "./Shimmer";
 const RestaurantMenu = () => {
-    [resMenu, setResMenu] = useState(null)
+    const [resMenu, setResMenu] = useState(null)
     useEffect( () => {
         fetchData()
     }, [])
