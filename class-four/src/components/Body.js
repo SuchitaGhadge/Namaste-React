@@ -3,6 +3,7 @@ import cards from "../utils/mockData";
 import RestaurantCard from "./RestaurantCard";
 import Shimmer from "./Shimmer"
 import { Link } from "react-router-dom";
+import useOnlineStatus from "../utils/useOnlineStatus";
 const Body = () => {
   // useState is used to create local state variable inside a function component.
   // Whenever state variable updates, React triggers reconciliation cycle (re-renders  the component)
@@ -28,6 +29,10 @@ const Body = () => {
         setFilteredListOfRes(cards)
       }, 500)
     }
+
+    const onlineStatus = useOnlineStatus();
+    
+    if(!onlineStatus) return <h1>Opps.. Looks like you're offline!! Please check your internet connection.</h1>
      return listOfRes.length === 0 ? <Shimmer /> : (
       <div className="body">
         <div className="filter">
