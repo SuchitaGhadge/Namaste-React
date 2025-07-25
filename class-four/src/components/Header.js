@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
 const Header = () => {
   const [btnLogin, setBtnLogin] = useState("Login");
+  // custom react hook
   const onlineStatus = useOnlineStatus()
   return (
     <header className="header">

@@ -29,7 +29,8 @@ const Body = () => {
         setFilteredListOfRes(cards)
       }, 500)
     }
-
+    
+  // custom react hook
     const onlineStatus = useOnlineStatus();
     
     if(!onlineStatus) return <h1>Opps.. Looks like you're offline!! Please check your internet connection.</h1>

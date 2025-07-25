@@ -4,7 +4,7 @@ import Shimmer from "./Shimmer";
 import useRestaurantMenu from "../utils/useRestaurantMenu";
 const RestaurantMenu = () => {
     const {resId} = useParams();
-    
+      // custom react hook
     const resMenu = useRestaurantMenu(resId)
     console.log('params', resId)
     if(resMenu == null) return <Shimmer />
