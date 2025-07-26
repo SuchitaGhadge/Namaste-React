@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import cards from "../utils/mockData";
-import RestaurantCard from "./RestaurantCard";
+import RestaurantCard , {withPromotedLabel} from "./RestaurantCard";
 import Shimmer from "./Shimmer"
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
@@ -32,6 +32,9 @@ const Body = () => {
     
   // custom react hook
     const onlineStatus = useOnlineStatus();
+
+  //  Higher Order Component
+    const RestaurantCardPromoted = withPromotedLabel(RestaurantCard)
     
     if(!onlineStatus) return <h1>Opps.. Looks like you're offline!! Please check your internet connection.</h1>
      return listOfRes.length === 0 ? <Shimmer /> : (
@@ -51,7 +54,8 @@ const Body = () => {
         <section className="restaurant-container">
          {filteredListOfRes.length && filteredListOfRes.map((restaurant) =>  
           <Link key={restaurant?.card?.card?.info?.id} to={`/restaurants/${restaurant?.card?.card?.info?.id}`} >
-            <RestaurantCard key={restaurant?.card?.card?.info?.id} resData={restaurant}/>
+            {restaurant?.card?.card?.info?.promoted ? <RestaurantCardPromoted resData={restaurant}/> :  <RestaurantCard resData={restaurant}/>}
+           
           </Link>
           )}
         </section>

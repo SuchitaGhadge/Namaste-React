@@ -102,3 +102,15 @@
 a{
     text-decoration: none;
 }
+
+.promoted {
+    position: absolute;
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+    padding: 0.25rem 1rem;
+    background-color: rgb(239, 235, 235);
+    color: rgb(88, 87, 87);
+    border-radius: 0.5rem 0 0 0;
+    text-transform: uppercase;
+    font-size: bold;
+}
