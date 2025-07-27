@@ -1,11 +1,15 @@
 import { LOGO_URL } from "../utils/constants";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import UserContext from "../utils/UserContext";
 const Header = () => {
   const [btnLogin, setBtnLogin] = useState("Login");
   // custom react hook
-  const onlineStatus = useOnlineStatus()
+  const onlineStatus = useOnlineStatus();
+
+  // Context
+  const {loggedInUser} = useContext(UserContext)
   return (
     <header className="header">
       <div className="logo-container">
@@ -30,16 +34,12 @@ const Header = () => {
           <li>
           <Link to="/cart">Cart</Link>
           </li>
-          <button
-            className="btn-login"
-            onClick={() => {
-              btnLogin === "Login"
-                ? setBtnLogin("Logout")
-                : setBtnLogin("Login");
-            }}
-          >
-            {btnLogin}
-          </button>
+          <li>
+            <Link to='/login'>Login</Link>
+          </li>
+          <li>
+            {loggedInUser}
+          </li>
         </ul>
       </div>
     </header>
