@@ -114,3 +114,60 @@ a{
     text-transform: uppercase;
     font-size: bold;
 }
+
+.login-container{
+    width: 90vw;
+    /* height: 100vh; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-form{
+    height: 25rem;
+    margin-left: 10rem;
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5rem;
+    width: 25rem;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.form-controls{
+    margin: 0.5rem;
+    padding: 0.25rem;
+    width: 15rem;
+}
+
+.form-label{
+    display: block;
+    font-size: 1.15rem;
+    margin-bottom: 0.25rem;
+    color:  #818181;
+    font-weight: 500;
+}
+
+.form-item{
+    border: 1px solid #9b9b9b;
+    outline: transparent;
+    border-radius: 0.25rem;
+    padding: 0.5rem;
+    width: 15rem;
+    color: #818181;
+    font-size: 0.85rem;
+}
+
+.btn-login-block{
+    padding: 0.5em 1rem;
+    text-transform: uppercase;
+    line-height: 1.5;
+    display: block;
+    background-color: rgb(138, 43, 226);
+    border: none;
+    border-radius: 0.25rem;
+    color: #fff;
+    box-shadow: rgba(138, 43, 226, 0.2) 0 8px 24px;
+}

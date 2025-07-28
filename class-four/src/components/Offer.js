@@ -1,8 +1,11 @@
+import { useContext } from "react";
+import UserContext from "../utils/UserContext";
 
 const Offer = () => {
+    const {loggedInUser} = useContext(UserContext)
     return (
-        <div>
-            <h2>Offers</h2>
+        <div className="login-container">
+            <h2>Offers for {loggedInUser}</h2>
         </div>
     )
 }

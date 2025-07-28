@@ -1,15 +1,21 @@
 import { LOGO_URL } from "../utils/constants";
-import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import UserContext from "../utils/UserContext";
-const Header = () => {
-  const [btnLogin, setBtnLogin] = useState("Login");
+const Header = ({isLoggedIn}) => {
+  console.log('isLog', isLoggedIn)
+  let navigate = useNavigate()
   // custom react hook
   const onlineStatus = useOnlineStatus();
 
   // Context
-  const {loggedInUser} = useContext(UserContext)
+  const {loggedInUser, setUserName} = useContext(UserContext)
+
+  const handleLogout = () => {
+    setUserName('');
+    navigate('/login')
+  }
   return (
     <header className="header">
       <div className="logo-container">
@@ -34,11 +40,12 @@ const Header = () => {
           <li>
           <Link to="/cart">Cart</Link>
           </li>
-          <li>
-            <Link to='/login'>Login</Link>
-          </li>
-          <li>
+          {loggedInUser && <li>
             {loggedInUser}
+          </li>}
+          <li>
+            {!isLoggedIn &&<Link to='/login'>Login</Link>}
+            {isLoggedIn && <button className="btn-login" onClick={handleLogout}>Logout</button>}  
           </li>
         </ul>
       </div>

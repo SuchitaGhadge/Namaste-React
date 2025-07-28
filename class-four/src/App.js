@@ -1,24 +1,31 @@
-import React, { lazy, Suspense } from "react";
+import React, { lazy, Suspense, useState } from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./components/Header";
 import Body from "./components/Body";
 import Help from "./components/Help";
-import {createBrowserRouter, RouterProvider, Outlet} from "react-router-dom"
+import {createBrowserRouter, RouterProvider, Outlet, useLocation} from "react-router-dom"
 // import Offer from "./components/Offer";
 import Error from "./components/Error";
 import RestaurantMenu from "./components/RestaurantMenu";
 import Cart from "./components/Cart"
 import Shimmer from "./components/Shimmer";
 import Login from "./components/Login";
+import UserContext from "./utils/UserContext";
 
 const Grocery = lazy(() => import( "./components/Grocery"))
 const Offer = lazy(()=> import("./components/Offer"))
 const App = () => {
+  const [userName , setUserName] = useState('')
+  const location = useLocation()
+  console.log('location', location)
+
   return (
+    <UserContext.Provider value={{loggedInUser: userName , setUserName} }>
     <div className="app">
-      <Header />
+      <Header isLoggedIn = {location?.state?.isLoggedIn} />
       <Outlet />
     </div>
+    </UserContext.Provider>
   );
 };
 
